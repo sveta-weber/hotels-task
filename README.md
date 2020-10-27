@@ -1,41 +1,13 @@
-# TypeScript Next.js example
+# Тестовое задание
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+Сделать страницу с поиском по турам. На панели слева 2 фильтра - "Тип тура" и "Наименование". Изменение любого из фильтров обновляет ленту с карточками туров.
+Для удобства в фигме справа есть карточка с проставленными полями из response.
 
-## Deploy your own
+Рекомендуется использовать [chakra-ui](https://next.chakra-ui.com/) и имеющиеся компоненты, а также [react-query](https://react-query.tanstack.com/)
 
-Deploy the example using [Vercel](https://vercel.com):
+В `pages/index.tsx` уже есть пример запроса к api и вывод response.
+Для начала выполнения сделать fork и выполнить `yarn` и `yarn dev`
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-typescript)
+[Figma](https://www.figma.com/file/IYe1QCI4PtqBC2AtM9nNey/truerism-demo?node-id=0%3A1)
 
-## How to use it?
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-typescript with-typescript-app
-# or
-yarn create next-app --example with-typescript with-typescript-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-## Notes
-
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
-
-```
-npm install --save-dev typescript
-```
-
-To enable TypeScript's features, we install the type declarations for React and Node.
-
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
-
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
-
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
-
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+Дизайн дан для примера. Точное следование не требуется, можно использовать другие отступы и цвета (например из стандартной темы chakra-ui)
