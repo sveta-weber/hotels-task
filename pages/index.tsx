@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Spinner } from "@chakra-ui/core";
+import { Container, Spinner } from "@chakra-ui/react";
 import { useQuery } from "react-query";
 
 type Hotel = {

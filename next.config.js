@@ -5,7 +5,7 @@ module.exports = (phase, { defaultConfig }) => {
       return [
         {
           source: "/api/:path*",
-          destination: `https://scarif.stg.rebellion.sh/api/:path*`,
+          destination: `https://мирпутешествий.рф/api/:path*`,
         },
       ];
     },

@@ -1,11 +1,11 @@
-import { ChakraProvider } from "@chakra-ui/core";
+import { ChakraProvider } from "@chakra-ui/react";
 import Head from "next/head";
 import type { AppProps } from "next/app";
-import { QueryCache, ReactQueryCacheProvider } from "react-query";
+import { QueryClient, QueryClientProvider } from "react-query";
 import { appTheme } from "theme";
 
-const queryCache = new QueryCache({
-  defaultConfig: {
+export const queryClient = new QueryClient({
+  defaultOptions: {
     queries: {
       retry: 0,
       retryDelay: () => 0,
@@ -14,20 +14,20 @@ const queryCache = new QueryCache({
   },
 });
 
-export default function DemoApp(props: AppProps) {
+export default function HotelsApp(props: AppProps) {
   const { Component, pageProps } = props;
 
   return (
     <div>
       <Head>
-        <title>truerism task</title>
+        <title>hotels app</title>
       </Head>
 
-      <ReactQueryCacheProvider queryCache={queryCache}>
-        <ChakraProvider resetCSS theme={appTheme}>
+      <QueryClientProvider client={queryClient}>
+        <ChakraProvider theme={appTheme}>
           <Component {...pageProps} />
         </ChakraProvider>
-      </ReactQueryCacheProvider>
+      </QueryClientProvider>
     </div>
   );
 }

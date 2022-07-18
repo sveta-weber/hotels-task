@@ -1,4 +1,4 @@
-import { theme, Theme } from "@chakra-ui/core";
+import { theme, Theme } from "@chakra-ui/react";
 
 export const appTheme: Theme = {
   ...theme,
