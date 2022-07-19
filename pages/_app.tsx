@@ -20,7 +20,7 @@ export default function HotelsApp(props: AppProps) {
   return (
     <div>
       <Head>
-        <title>hotels app</title>
+        <title>Tours App</title>
       </Head>
 
       <QueryClientProvider client={queryClient}>

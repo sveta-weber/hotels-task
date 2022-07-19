@@ -9,5 +9,8 @@ module.exports = (phase, { defaultConfig }) => {
         },
       ];
     },
+    env: {
+      PUBLIC_URL: "/",
+    },
   };
 };
